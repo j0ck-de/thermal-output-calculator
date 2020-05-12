@@ -1,0 +1,10 @@
+// FOR DEVELOPMENT ONLY!
+// Use this at the root element. Highlight every nested item with a border.
+@mixin border-everything {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+
+  & > * {
+    border: 1px dashed lightslategray;
+  }
+}

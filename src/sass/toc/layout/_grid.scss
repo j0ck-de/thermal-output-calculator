@@ -1,0 +1,34 @@
+@import "../../utils/development-helpers";
+
+.TOC {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "presets"
+    "inputs"
+    "buttons"
+    "result"
+    "history";
+
+  width: 100%;
+
+  // FOR DEVELOPMENT. Delete!
+  @include border-everything;
+
+  &__PRESETS {
+    grid-area: presets;
+  }
+  &__INPUTS {
+    grid-area: inputs;
+  }
+  &__BUTTONS {
+    grid-area: buttons;
+  }
+  &__RESULT {
+    grid-area: result;
+  }
+  &__HISTORY {
+    grid-area: history;
+  }
+}
