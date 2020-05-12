@@ -8,17 +8,73 @@
 </head>
 
 <body>
+
   <!-- APP: THERMAL OUTPUT CALCULATOR | short: TOC -->
-  <div id="THERMAL_OUTPUT_CALCULATOR" class="TOC">
-    <div class="TOC__INPUTS inputs"></div>
-    <!-- System temperatures -->
-    <input class="inputs__input" type="number" placeholder="Input Placeholder" />
-    <input class="inputs__input" type="number" placeholder="Input Placeholder" />
-    <input class="inputs__input" type="number" placeholder="Input Placeholder" />
-    <!-- Radiators thermal output and exponent -->
-    <input class="inputs__input" type="number" placeholder="Input Placeholder" />
-    <input class="inputs__input" type="number" placeholder="Input Placeholder" />
-  </div>
+  <article id="THERMAL_OUTPUT_CALCULATOR" class="TOC">
+    <!-- Presets system temperatures -->
+    <div class="TOC__PRESETS [presets]">
+      <label for="presets">Presets:</label>
+      <select id="presets" class="[presets__select]">
+        <option class="[presets__option]" value="Preset 1">Preset 1</option>
+        <option class="[presets__option]" value="Preset 2">Preset 2</option>
+        <option class="[presets__option]" value="Preset 3">Preset 3</option>
+      </select>
+    </div>
+    <div class="TOC__INPUTS [inputs]">
+      <!-- System temperatures -->
+      <input class="[inputs__input]" type="number" placeholder="Heat flow" />
+      <input class="[inputs__input]" type="number" placeholder="Heat return" />
+      <input class="[inputs__input]" type="number" placeholder="Heat temperature" />
+      <!-- Radiators thermal output and exponent -->
+      <input class="[inputs__input]" type="number" placeholder="Thermal output" />
+      <input class="[inputs__input]" type="number" placeholder="Radiator exponent" />
+    </div>
+    <!-- Button area -->
+    <div class="TOC__BUTTONS [buttons]">
+      <!-- Save the calculation and update history -->
+      <button class="[buttons__button]">SAVE CALCULATION</button>
+      <!-- Save the user system temperatures in presets -->
+      <button class="[buttons__button]">SAVE PRESET</button>
+    </div>
+    <!-- Show the calculated result -->
+    <div class="TOC__RESULT [result]">
+      Result
+    </div>
+    <!-- History: saved calculations -->
+    <table class="TOC__HISTORY [history]">
+      <caption class="[history__title]">HISTORY</caption>
+      <!-- TODO: CHECK FOR GOOD CLASS NAMES -->
+      <thead>
+        <tr>
+          <th>Heat flow</th>
+          <th>Heat Return</th>
+          <th>Heat Temperature</th>
+          <th>Thermal Output</th>
+          <th>Exponent</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>70</td>
+          <td>65</td>
+          <td>20</td>
+          <td>2800</td>
+          <td>1.337</td>
+          <td>1789</td>
+        </tr>
+        <tr>
+          <td>70</td>
+          <td>65</td>
+          <td>20</td>
+          <td>2800</td>
+          <td>1.337</td>
+          <td>1789</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
   <script src="./js/index.js"></script>
 </body>
 
