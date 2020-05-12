@@ -1,1 +1,1 @@
-console.log('App initialized!');
+import '../sass/main.scss';
