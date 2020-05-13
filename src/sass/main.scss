@@ -1,1 +1,8 @@
-@import "./toc/index";
+@import "./utils/mixins";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./components/navigation/index";
+@import "./components/footer/index";
+@import "./components/toc/index";

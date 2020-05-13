@@ -1,20 +1,29 @@
-@import "../../utils/development-helpers";
+@import '../../../utils/development-helpers';
 
 .TOC {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(5, auto);
   grid-template-areas:
+    "heading"
     "presets"
     "inputs"
     "buttons"
     "result"
     "history";
 
+  // Make variables or mixins for margin and padding
+  margin: 10rem 0;
+  padding: 0 0.5rem;
+
   width: 100%;
 
   // FOR DEVELOPMENT. Delete!
   @include border-everything;
+
+  &__HEADING {
+    grid-area: heading;
+  }
 
   &__PRESETS {
     grid-area: presets;

@@ -1,0 +1,18 @@
+.inputs {
+  color: red;
+
+
+  &__container { 
+
+
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+
+  }
+  &__input {}
+}

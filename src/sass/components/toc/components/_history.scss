@@ -1,0 +1,56 @@
+.history {
+  text-align: center;
+
+  &__title {}
+  &__col-head {
+    &--1 {
+      &::before {
+        content: 'HF';
+        @include respond(tablet-portrait) {
+          content: 'Heat flow';
+        }
+      }
+    }
+    &--2 {
+      &::before {
+        content: 'HR';
+        @include respond(tablet-portrait) {
+          content: 'Heat return';
+        }
+      }
+    }
+    &--3 {
+      &::before {
+        content: 'HT';
+        @include respond(tablet-portrait) {
+          content: 'Heat temperature';
+        }
+      }
+    }
+    &--4 {
+      &::before {
+        content: 'TO';
+        @include respond(tablet-portrait) {
+          content: 'Thermal output';
+        }
+      }
+    }
+    &--5 {
+      &::before {
+        content: 'EX';
+        @include respond(tablet-portrait) {
+          content: 'Exponent';
+        }
+      }
+    }
+    &--6 {
+      &::before {
+        content: 'RT';
+        @include respond(tablet-portrait) {
+          content: 'Result';
+        }
+      }
+    }
+  }
+  &__col-body {}
+}

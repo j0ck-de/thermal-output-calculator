@@ -8,60 +8,81 @@
 </head>
 
 <body>
-
   <!-- APP: THERMAL OUTPUT CALCULATOR | short: TOC -->
   <article id="THERMAL_OUTPUT_CALCULATOR" class="TOC">
+    <h1 class="TOC__HEADING heading">Thermal Output Calculator</h1>
     <!-- Presets system temperatures -->
-    <div class="TOC__PRESETS [presets]">
+    <div class="TOC__PRESETS presets">
       <label for="presets">Presets:</label>
-      <select id="presets" class="[presets__select]">
-        <option class="[presets__option]" value="Preset 1">Preset 1</option>
-        <option class="[presets__option]" value="Preset 2">Preset 2</option>
-        <option class="[presets__option]" value="Preset 3">Preset 3</option>
+      <select id="presets" class="presets__select">
+        <option class="presets__option" value="Preset 1">Preset 1</option>
+        <option class="presets__option" value="Preset 2">Preset 2</option>
+        <option class="presets__option" value="Preset 3">Preset 3</option>
       </select>
     </div>
-    <div class="TOC__INPUTS [inputs]">
+    <div class="TOC__INPUTS inputs">
       <!-- System temperatures -->
-      <input class="[inputs__input]" type="number" placeholder="Heat flow" />
-      <input class="[inputs__input]" type="number" placeholder="Heat return" />
-      <input class="[inputs__input]" type="number" placeholder="Heat temperature" />
+      <div class="inputs__container">
+        <div class="inputs__description">
+          <span class="inputs__title">Heat Flow</span>
+          <input class="inputs__input" type="number" placeholder="Heat flow" />
+        </div>
+        <div class="inputs__description">
+          <span class="inputs__title">Heat Return</span>
+          <input class="inputs__input" type="number" placeholder="Heat return" />
+        </div>
+        <div class="inputs__description">
+          <span class="inputs__title">Heat Temperature</span>
+          <input class="inputs__input" type="number" placeholder="Heat temperature" />
+        </div>
+      </div>
       <!-- Radiators thermal output and exponent -->
-      <input class="[inputs__input]" type="number" placeholder="Thermal output" />
-      <input class="[inputs__input]" type="number" placeholder="Radiator exponent" />
+      <div class="inputs__container">
+        <div class="inputs__description">
+          <span class="inputs__title">Thermal output</span>
+          <input class="inputs__input" type="number" placeholder="Thermal output" />
+        </div>
+        <div class="inputs__description">
+          <span class="inputs__title">Exponent</span>
+          <input class="inputs__input" type="number" placeholder="Radiator exponent" />
+        </div>
+      </div>
     </div>
     <!-- Button area -->
-    <div class="TOC__BUTTONS [buttons]">
+    <div class="TOC__BUTTONS buttons">
       <!-- Save the calculation and update history -->
-      <button class="[buttons__button]">SAVE CALCULATION</button>
+      <button class="buttons__button">SAVE CALCULATION</button>
       <!-- Save the user system temperatures in presets -->
-      <button class="[buttons__button]">SAVE PRESET</button>
+      <button class="buttons__button">SAVE PRESET</button>
     </div>
     <!-- Show the calculated result -->
-    <div class="TOC__RESULT [result]">
+    <div class="TOC__RESULT result">
       Result
     </div>
     <!-- History: saved calculations -->
-    <table class="TOC__HISTORY [history]">
-      <caption class="[history__title]">HISTORY</caption>
+    <table class="TOC__HISTORY history">
+      <caption class="history__title">
+        HISTORY
+      </caption>
       <!-- TODO: CHECK FOR GOOD CLASS NAMES -->
       <thead>
         <tr>
-          <th>Heat flow</th>
-          <th>Heat Return</th>
-          <th>Heat Temperature</th>
-          <th>Thermal Output</th>
-          <th>Exponent</th>
-          <th>Result</th>
+          <th class="history__col-head history__col-head--1"></th>
+          <th class="history__col-head history__col-head--2"></th>
+          <th class="history__col-head history__col-head--3"></th>
+          <th class="history__col-head history__col-head--4"></th>
+          <th class="history__col-head history__col-head--5"></th>
+          <th class="history__col-head history__col-head--6"></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>70</td>
-          <td>65</td>
-          <td>20</td>
-          <td>2800</td>
-          <td>1.337</td>
-          <td>1789</td>
+          <td class="history__col-body history__col-body--2">70</td>
+          <td class="history__col-body history__col-body--3">65</td>
+          <td class="history__col-body history__col-body--4">20</td>
+          <td class="history__col-body history__col-body--5">2800</td>
+          <td class="history__col-body history__col-body--6">1.337</td>
+          <td class="history__col-body history__col-body--7">1789</td>
         </tr>
         <tr>
           <td>70</td>
